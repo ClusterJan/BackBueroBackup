@@ -1,0 +1,31 @@
+﻿<Window x:Class="BackBuero_Backup.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BackBüro - BackUp" Height="Auto" Width="Auto" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" SizeToContent="WidthAndHeight" FontWeight="Bold" WindowStyle="ThreeDBorderWindow">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="200" />
+        </Grid.ColumnDefinitions>
+        
+        <Button x:Name="startBackup" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Datensicherung jetzt ausführen" Margin="10,10,10,10" FontSize="20" Click="StartBackup_Click" />
+        
+        <Label Grid.Row="1" Grid.Column="0" Margin="0,0,5,0" Height="Auto" VerticalAlignment="Center" Content="Letzte Datensicherung:" HorizontalAlignment="Right" FontSize="14" />
+        <Label x:Name="lastBackupLbl" Grid.Row="1" Grid.Column="1" Margin="5,0,0,0" Height="Auto" VerticalAlignment="Center" Content="00.00.0000" HorizontalAlignment="Left" FontSize="14" />
+        
+        <Label Grid.Row="2" Grid.Column="0" Margin="0,0,5,0" Height="Auto" VerticalAlignment="Center" Content="Pfad:" HorizontalAlignment="Right" FontSize="14" />
+        <Label x:Name="pathLbl" Grid.Row="2" Grid.Column="1" Margin="5,0,0,0" Height="Auto" VerticalAlignment="Center" Content="A:\\" HorizontalAlignment="Left" FontSize="14" />
+        
+        <Button Grid.Row="3" Grid.Column="0" Margin="5,0,0,0" Height="Auto" VerticalAlignment="Center" Content="Einstellungen" HorizontalAlignment="Stretch" Click="Button_Click" />
+        <ProgressBar x:Name="progressBar" Grid.Row="3" Grid.Column="1" Margin="5,5,5,5" Height="20" VerticalAlignment="Center" />
+        
+        <Button x:Name="Restore" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="Datensicherung wiederherstellen" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,10,0" Click="Restore_Click"/>
+    </Grid>
+</Window>
